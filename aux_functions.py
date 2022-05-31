@@ -13,7 +13,7 @@ from matplotlib.colors import LinearSegmentedColormap
 import os
 import numpy as np
 from scipy.spatial.distance import cdist
-from plots import *
+#from plots import *
 from pathlib import Path
 
 def normalize_1(section):
