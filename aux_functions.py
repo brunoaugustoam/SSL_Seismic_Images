@@ -13,7 +13,7 @@ from matplotlib.colors import LinearSegmentedColormap
 import os
 import numpy as np
 from scipy.spatial.distance import cdist
-#from plots import *
+from plots import *
 from pathlib import Path
 
 def normalize_1(section):
@@ -27,7 +27,7 @@ def normalize_1(section):
 
 def rotate_tensor(img_nparray, rotations_list=None, plot=False):
     """ Rotates the given tensor into the given angle list.  """
-    from plots import *
+    from plots import plot_array
     if rotations_list == None:
         rotations_list = [-8,-4,0,4,8]
 
