@@ -9,7 +9,8 @@ import random
 import cv2
 import numpy as np
 import segyio
-from aux_functions import *
+
+from aux_functions_demo import *
 
 
 class SeismicDataset(data.Dataset):
