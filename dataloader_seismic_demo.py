@@ -101,7 +101,7 @@ class SeismicDataset(data.Dataset):
                 low = int(np.round((len(sections_list) * self.partition[0]),0)) 
                 high = int(np.round((len(sections_list) * self.partition[1]),0))
                 sections_list = sections_list[low:low+high]
-                masks_list = masks_list[lowlow+high]
+                masks_list = masks_list[low:low+high]
                 sec_number_list = sec_number_list[low:low+high]
             elif self.split=='val':
                 low = int(np.round((len(sections_list) * self.partition[2]),0)) #
