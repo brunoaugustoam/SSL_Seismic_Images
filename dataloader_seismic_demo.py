@@ -19,7 +19,7 @@ class SeismicDataset(data.Dataset):
         self.split = split.lower()
         self.dataset_name =  dataset_name
         self.train_type = train_type
-        self.partition = [0.60,0.30,0.10]  # Originally: [0.60,0.20,0.20]
+        self.partition = [0.60,0.00,0.40]  # Originally: [0.60,0.20,0.20]
 
         self.task = task
         self.rotations = [-8,-4,0,4,8]
