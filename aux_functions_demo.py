@@ -27,7 +27,7 @@ def normalize_1(section):
 
 def rotate_tensor(img_nparray, rotations_list=None, plot=False):
     """ Rotates the given tensor into the given angle list.  """
-    from plots import *
+    from plots import plot_array
     if rotations_list == None:
         rotations_list = [-8,-4,0,4,8]
 
