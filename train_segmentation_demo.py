@@ -190,7 +190,7 @@ def train_segmentation(dataloader_train, model, optimizer, criterion, num_epochs
     elif train_type=='fine_tune':
       return( np.array(train_iou_classes_all), np.array(train_iou_std_between_classes_all), np.array(train_iou_mean_all), np.array(train_loss_mean_all), np.array(train_loss_std_all))
 
-def test_segmentation(dataloader_test, model, criterion, device,num_classes, plotar=False, save=False, path=None, name_model=None,weighted=True,task='segmentation'): 
+def test_segmentation(dataloader_test, model, criterion, device,num_classes, plotar=False, plot_all=False, save=False, path=None, name_model=None,weighted=True,task='segmentation'): 
 
     test_pred_list, test_semantic_label_list = [],[]
     loss_per_epoch,iou_mean_per_epoch, iou_classes_per_epoch = [],[],[]
@@ -242,6 +242,9 @@ def test_segmentation(dataloader_test, model, criterion, device,num_classes, plo
 
         #sum number of all seen images over all epochs
         n += test_labels.size()[0]
+        
+        if plot_all:
+            plot_segmentation_results(test_images,test_labels,y_hat,0,name,dataloader_test.dataset.dataset_name, save, path, name_model)
 
     #loss per epoch
     loss_per_epoch = np.array(loss_per_epoch)
