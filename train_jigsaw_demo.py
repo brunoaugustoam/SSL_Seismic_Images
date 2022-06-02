@@ -1,10 +1,9 @@
-
 import torch
 from torch import nn, optim
-
 import os, time
 import numpy as np
-from aux_functions import *
+
+from aux_functions_demo import *
 
 def train_jigsaw(dataloader_train, dataloader_val, model, optimizer, criterion, num_epochs, device, scheduler=None,tolerancia = 40,save=False,saved_models_path=None, saving_logs_path=None,name_model=None):
     
