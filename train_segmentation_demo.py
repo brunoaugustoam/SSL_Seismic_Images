@@ -4,8 +4,8 @@ import os, time
 import numpy as np
 from sklearn import metrics
 
-from plots import *
-from aux_functions import *
+from plots_demo import *
+from aux_functions_demo import *
 
 def evaluate_iouf1(prediction_tensor, labels_tensor,class_array):
     prds = prediction_tensor.cpu().numpy().squeeze()
