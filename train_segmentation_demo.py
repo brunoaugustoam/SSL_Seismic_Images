@@ -245,6 +245,7 @@ def test_segmentation(dataloader_test, model, criterion, device,num_classes, plo
         
         if plot_all:
             plot_segmentation_results(test_images,test_labels,y_hat,0,name,dataloader_test.dataset.dataset_name, save, path, name_model)
+            print(f'test loss {np.mean(loss_per_epoch):.5f},  test mean iou: {np.round(iou_mean,4)}')
 
     #loss per epoch
     loss_per_epoch = np.array(loss_per_epoch)
