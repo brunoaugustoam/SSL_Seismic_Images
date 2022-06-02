@@ -190,7 +190,7 @@ def train_segmentation(dataloader_train, model, optimizer, criterion, num_epochs
     elif train_type=='fine_tune':
       return( np.array(train_iou_classes_all), np.array(train_iou_std_between_classes_all), np.array(train_iou_mean_all), np.array(train_loss_mean_all), np.array(train_loss_std_all))
 
-def test_segmentation(dataloader_test, model, criterion, device,num_classes, printar=False, plotar=False, save=False, path=None, name_model=None,weighted=True,task='segmentation'): 
+def test_segmentation(dataloader_test, model, criterion, device,num_classes, plotar=False, save=False, path=None, name_model=None,weighted=True,task='segmentation'): 
 
     test_pred_list, test_semantic_label_list = [],[]
     loss_per_epoch,iou_mean_per_epoch, iou_classes_per_epoch = [],[],[]
@@ -252,11 +252,6 @@ def test_segmentation(dataloader_test, model, criterion, device,num_classes, pri
     for idx in range(iou_classes_per_epoch_T.shape[0]):
         mean_iou_classes_per_epoch.append(np.mean(iou_classes_per_epoch_T[idx]))
 
-    if printar:
-      print("test IoU")
-      for classe in range(iou_classes_per_epoch_T.shape[0]):
-        print(f"Classe:{classe} - mean: {iou_classes_per_epoch[classe].mean():.3f}")
-
     if plotar:
       plot_segmentation_results(test_images,test_labels,y_hat,0,name,dataloader_test.dataset.dataset_name, save, path, name_model)
 
@@ -266,7 +261,7 @@ def test_segmentation(dataloader_test, model, criterion, device,num_classes, pri
     return  np.array(mean_iou_classes_per_epoch), np.array(np.std(iou_classes_per_epoch)), np.array(np.mean(iou_mean_per_epoch)), np.mean(loss_per_epoch), np.std(loss_per_epoch),  np.array(test_pred_list), np.array(test_semantic_label_list)
 
 
-def val_segmentation(dataloader_val, model, criterion, device,num_classes, printar=False, plotar=False,weighted=True,task='segmentation'): 
+def val_segmentation(dataloader_val, model, criterion, device,num_classes, plotar=False,weighted=True,task='segmentation'): 
 
     loss_per_epoch,iou_mean_per_epoch, iou_classes_per_epoch = [],[],[]
     val_pred_list, val_semantic_label_list = [],[]
@@ -329,11 +324,6 @@ def val_segmentation(dataloader_val, model, criterion, device,num_classes, print
     for idx in range(iou_classes_per_epoch_T.shape[0]):
         mean_iou_classes_per_epoch.append(np.mean(iou_classes_per_epoch_T[idx]))
 
- 
-    if printar:
-      print("val IoU")
-      for classe in range(iou_classes_per_epoch_T.shape[0]):
-        print(f"Classe:{classe} - mean: {iou_classes_per_epoch[classe].mean():.3f}")
 
     if plotar:
       plot_segmentation_results(val_images,val_labels,y_hat,0,name,dataset=dataloader_val.dataset.dataset_name)
