@@ -1,5 +1,3 @@
-from aux_functions import *
-
 import torch
 from torch import nn, optim
 from torchvision import transforms as T
@@ -16,6 +14,8 @@ import itertools
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 import matplotlib.patches as patches
+
+from aux_functions_demo import *
 
 
 
