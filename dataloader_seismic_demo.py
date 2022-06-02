@@ -19,7 +19,7 @@ class SeismicDataset(data.Dataset):
         self.split = split.lower()
         self.dataset_name =  dataset_name
         self.train_type = train_type
-        self.partition = [0.60,0.40,0.00]  # Originally: [0.60,0.20,0.20]
+        self.partition = [0.60,0.30,0.10]  # Originally: [0.60,0.20,0.20]
 
         self.task = task
         self.rotations = [-8,-4,0,4,8]
@@ -93,18 +93,18 @@ class SeismicDataset(data.Dataset):
 
 
             if self.split=='train':
-                high = int(np.round((len(sections_list) * self.partition[0]),0)) #+ 1 
+                high = int(np.round((len(sections_list) * self.partition[0]),0)) 
                 sections_list = sections_list[:high]
                 masks_list = masks_list[:high]
                 sec_number_list = sec_number_list[:high]
             elif self.split=='test':   
-                low = int(np.round((len(sections_list) * self.partition[0]),0)) #+1
+                low = int(np.round((len(sections_list) * self.partition[0]),0)) 
                 high = int(np.round((len(sections_list) * self.partition[1]),0))
                 sections_list = sections_list[low:-high]
                 masks_list = masks_list[low:-high]
                 sec_number_list = sec_number_list[low:-high]
             elif self.split=='val':
-                low = int(np.round((len(sections_list) * self.partition[2]),0)) # +1
+                low = int(np.round((len(sections_list) * self.partition[2]),0)) #
                 sections_list = sections_list[-low:]
                 masks_list = masks_list[-low:]
                 sec_number_list = sec_number_list[-low:]
