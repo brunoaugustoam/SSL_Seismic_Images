@@ -67,7 +67,7 @@ def train_segmentation(dataloader_train, model, optimizer, criterion, num_epochs
       #First Load the mini batch and iterate over it
       for idx, (train_images, train_labels,name) in enumerate(dataloader_train):
 
-        if idx % 30 ==0 :
+        if idx % 50 ==0 :
           print(f'{idx}/{ len(dataloader_train.dataset.sections) /dataloader_train.batch_size}')
 
         #Redefine Loss
@@ -209,7 +209,7 @@ def test_segmentation(dataloader_test, model, criterion, device,num_classes, pri
     with torch.no_grad():
       for idx, (test_images, test_labels, name) in enumerate(dataloader_test):  
 
-        if idx % 2 ==0 :
+        if idx % 50 ==0 :
           print(f'{idx}/{ len(dataloader_test.dataset.sections) /dataloader_test.batch_size}') 
 
         if weighted:
@@ -288,7 +288,7 @@ def val_segmentation(dataloader_val, model, criterion, device,num_classes, print
         if weighted:
             criterion = set_criterion(task, device,weighted=True,mask=val_labels,dataset=dataloader_val.dataset.dataset_name)
 
-        if idx % 2 ==0 :
+        if idx % 50 ==0 :
           print(f'{idx}/{ len(dataloader_val.dataset.sections) /dataloader_val.batch_size}') 
 
         #Cast images to device

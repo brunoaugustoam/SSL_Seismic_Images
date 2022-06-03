@@ -36,7 +36,7 @@ def train_rotation(dataloader_train, dataloader_validation, model, optimizer, cr
       #First Load the mini batch and iterate over it
       for idx, (train_images, train_labels,name) in enumerate(dataloader_train):
 
-        if idx % 2 ==0 :
+        if idx % 50 ==0 :
           print(f'{idx}/{ len(dataloader_train.dataset.sections) /dataloader_train.batch_size}')
         
         #Cast images to device
@@ -143,7 +143,7 @@ def test_rotation(dataloader_test, model, criterion, device):
     with torch.no_grad():
       for idx, (test_images, test_labels,name) in enumerate((dataloader_test)):   
 
-        if idx % 2 ==0 :
+        if idx % 50 ==0 :
           print(f'{idx}/{ len(dataloader_test.dataset.sections) /dataloader_test.batch_size}') 
 
 
