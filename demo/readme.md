@@ -3,11 +3,6 @@
 
 This is a demo of the experiments performed for the paper "Semantic Segmentation of Seismic Images Based on Self-Supervised Learning from Few-Labeled Samples", submitted to the special stream of IEEE Geoscience and Remote Sensing letters at Sibgrapi 2022.
 
-Authored by: 
-  * Bruno A. A. Monteiro - Department of Computer Science, UFMG, Belo Horizonte, Brazil  
-  * Hugo Oliveira  - Institute of Mathematics and Statistics, USP, São Paulo, Brazil
-  * Jefersson A. dos Santos - Department of Computer Science, UFMG, Belo Horizonte, Brazil
-
 In this Demo it is possible to visualize the already trained models for 1 and 5 shots, and also to fine-tune with 1 to 6 shots. 
 
 So far, only a few samples of the open dataset Netherlands F3 Block are available. The full volume of data can be obtained at:
