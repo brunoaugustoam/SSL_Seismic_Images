@@ -11,10 +11,17 @@ Authored by:
 
 ### Requires 
 matplotlib
+
 numpy
+
 scikit-image
+
 scikit-learn
+
 segyio
+
 torch
+
 torchinfo
+
 torchvision
