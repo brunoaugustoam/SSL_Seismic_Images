@@ -129,7 +129,7 @@ class SeismicDataset(data.Dataset):
                 return sections_list, masks_list, sec_number_list
 
         #### New Zealand Parihaka  #####
-        #######################################################################################################
+        ##############################################
         elif self.dataset_name=='Parihaka_NZPM':
             raise ValueError('Parihaka dataset is not yet available in this demo')
 
@@ -166,7 +166,7 @@ class SeismicDataset(data.Dataset):
             inline = np.arange(0,self.section_volume.shape[1])
             crossline = np.arange(0,self.section_volume.shape[2])
 
-            seed = 42 #np.random.randint(3125161651,size=1)
+            seed = 42 
             np.random.seed(seed) ; inline = list(np.random.permutation(inline))
             np.random.seed(seed) ; crossline = list(np.random.permutation(crossline))
 
