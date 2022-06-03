@@ -12,4 +12,4 @@ OpendTect project with 3D Seismic Data, Acoustic Impedance, Wells, Horizons - ht
 Interpreted geological data used in our paper: https://zenodo.org/record/1471548#.Ypj4vHXMKrx 
 
 
-The interpreted volume of the Parihaka Dataset are open at: https://public.3.basecamp.com/p/JyT276MM7krjYrMoLqLQ6xST
+The interpreted volume of the Parihaka Dataset is open at: https://public.3.basecamp.com/p/JyT276MM7krjYrMoLqLQ6xST
