@@ -11,7 +11,7 @@ Authored by:
 
 ## Datasets:
  * Netherlands F3 Interpretation Dataset [[link]](https://zenodo.org/record/1471548\#.Yf0Y3-rMKrx). 
- * Parihaka seismic data, released by the "2020 SEG Annual Meeting Machine Learning Interpretation Workshop" [[link]](https://public.3.basecamp.com/p/JyT276MM7krjYrMoLqLQ6xST). 
+ * Parihaka Seismic Data [[link]](https://public.3.basecamp.com/p/JyT276MM7krjYrMoLqLQ6xST). 
 
 ## Pretext Tasks
  * Rotation: the original image is randomly rotated into one of the five possible angles (-8,-4, 0, 4, 8 degrees). Then it is cropped, so no empty values are given as input. The network must then identify which of the rotations was applied. 
