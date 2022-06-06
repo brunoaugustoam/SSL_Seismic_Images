@@ -9,7 +9,10 @@ Authored by:
 * Hugo Oliveira - Institute of Mathematics and Statistics, USP, São Paulo, Brazil
 * Jefersson A. dos Santos - Department of Computer Science, UFMG, Belo Horizonte, Brazil
 
-## Datasets:
+# Method
+
+
+## Datasets
  * Netherlands F3 Interpretation Dataset [[link]](https://zenodo.org/record/1471548\#.Yf0Y3-rMKrx). 
  * Parihaka Seismic Data [[link]](https://public.3.basecamp.com/p/JyT276MM7krjYrMoLqLQ6xST). 
 
