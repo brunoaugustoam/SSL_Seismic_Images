@@ -10,8 +10,8 @@ Authored by:
 # Experimental Details 
 
 Used datasets:
- * Netherlands F3 Interpretation Dataset [[https://zenodo.org/record/1471548\#.Yf0Y3-rMKrx]]. 
- * Parihaka seismic data, released by the ``2020 SEG Annual Meeting Machine Learning Interpretation Workshop'' [[https://public.3.basecamp.com/p/JyT276MM7krjYrMoLqLQ6xST]]. 
+ * Netherlands F3 Interpretation Dataset [[link]](https://zenodo.org/record/1471548\#.Yf0Y3-rMKrx). 
+ * Parihaka seismic data, released by the ``2020 SEG Annual Meeting Machine Learning Interpretation Workshop'' [[link]](https://public.3.basecamp.com/p/JyT276MM7krjYrMoLqLQ6xST). 
 
 For the rotation task, the original image is randomly rotated into one of the five possible angles (-8,-4, 0, 4, 8 degrees). Then it is cropped, so no empty values are given as input. The network must then identify which of the rotations was applied. For the jigsaw task, the original image is cropped into 9 regular-sized tiles with a small random gap between them. To avoid an overly complicated task, the possible permutations are limited to 1000, being 500 randomly selected, and for each of them, its pair with the biggest hamming distance is selected. The model is requested to determine the original position for each one of the permuted tiles. When training the model to solve the pretext tasks, the entire train set is used to train, and the validation set is used for evaluation. To solve both these tasks, the network must learn to recognize important features of the image that can be reused via transfer learning and fine-tuning to the segmentation task, for which we simulated a few-shot scenario. We randomly selected 1, 5, 10, and 20 labeled seismic sections from the train set, and used only them for fine-tuning. Later on, testing into the entire test set of each dataset.
 
