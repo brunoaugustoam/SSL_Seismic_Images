@@ -11,7 +11,7 @@ Authored by:
 
 # Method
 
-[[https://github.com/brunoaugustoam/SSL_Seismic_Images/tree/main/imgs/method.png?|alt=octocat]]
+<img src="https://github.com/brunoaugustoam/SSL_Seismic_Images/blob/main/imgs/method.png" width="400" height="400">
 
 
 
@@ -37,7 +37,15 @@ For the classification tasks, the output of the backbone is connected to an aver
 
 Dropout was applied after each one of the four layer sets. All training images were augmented using random crop, half-chance horizontal flip, and Gaussian noise addition. We ran a grid search to find the optimal setups for both pretext tasks, varying the learning rates, the optimizers, and schedulers. The best models were then used for fine-tuning. In this stage, the employed grid search varies only the learning rates, using Adam optimizer and StepLR. The best setup was then selected for 5-fold cross-validation, being the initial learning rate of $1 \times 10^{-4}$ for the backbone and $1 \times 10^{-3}$ for the segmenter. For the baseline, the best setup was employing 10x bigger learning rates. At every stage, we use a weight decay of $1e^{-4}$. To validate our results, we calculated the confidence interval assuming a two-tailed paired t-student distribution.
 
-## Requires 
+# Results
+
+## Predictions
+<img src="https://github.com/brunoaugustoam/SSL_Seismic_Images/blob/main/imgs/predictions.png" width="400" height="600">
+
+## Few-shot plot
+<img src="https://github.com/brunoaugustoam/SSL_Seismic_Images/blob/main/imgs/grafs.png" width="400" height="400">
+
+# Requires 
 - matplotlib
 - numpy
 - scikit-image
