@@ -11,6 +11,9 @@ Authored by:
 
 # Method
 
+[[https://github.com/brunoaugustoam/SSL_Seismic_Images/tree/main/imgs/method.png?|alt=octocat]]
+
+
 
 ## Datasets
  * Netherlands F3 Interpretation Dataset [[link]](https://zenodo.org/record/1471548\#.Yf0Y3-rMKrx). 
