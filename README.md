@@ -9,8 +9,9 @@ Authored by:
 
 # Experimental Details 
 
-
-The experiments were conducted in two publicly available datasets. One is the Netherlands F3 Interpretation Dataset, interpreted by \cite{baroni_lais_2018_1471548}\footnote{\url{https://zenodo.org/record/1471548\#.Yf0Y3-rMKrx}}. The second one is the Parihaka seismic data, released by the ``2020 SEG Annual Meeting Machine Learning Interpretation Workshop'' \footnote{\url{https://public.3.basecamp.com/p/JyT276MM7krjYrMoLqLQ6xST}}. Both volumes are composed of crossline and inline slices (seismic sections orthogonal to each other), with ten and six, classes in total, respectively.  As only labels for the training volume is available, to make the evaluation feasible, only the train volume was used, consisting of inline and crossline slices, composed of six classes in total. After removing sections with problematic data and misclassified labels, and splitting the datasets, we end up with 916 sections for train, 305 for each validation and test set in the F3 Netherlands, and 823 for train, and 274 for validation and test in the Parihaka. The distribution between the three splits was random. Unlike other studies regarding the interpretation of seismic images (Table \ref{table:related_work_tab}), we employed the usage of the biggest possible standard size for each dataset, resulting in 448x448 images for the Netherlands F3 dataset, and 832x448 for Parihaka dataset, so the model could benefit from a larger spatial context. The selected datasets are adequate for the tasks as they have a good signal/noise ratio, well-defined semantic labels, and plenty of volume of data. 
+Used datasets:
+ * Netherlands F3 Interpretation Dataset [[https://zenodo.org/record/1471548\#.Yf0Y3-rMKrx]]. 
+ * Parihaka seismic data, released by the ``2020 SEG Annual Meeting Machine Learning Interpretation Workshop'' [[https://public.3.basecamp.com/p/JyT276MM7krjYrMoLqLQ6xST]]. 
 
 For the rotation task, the original image is randomly rotated into one of the five possible angles (-8,-4, 0, 4, 8 degrees). Then it is cropped, so no empty values are given as input. The network must then identify which of the rotations was applied. For the jigsaw task, the original image is cropped into 9 regular-sized tiles with a small random gap between them. To avoid an overly complicated task, the possible permutations are limited to 1000, being 500 randomly selected, and for each of them, its pair with the biggest hamming distance is selected. The model is requested to determine the original position for each one of the permuted tiles. When training the model to solve the pretext tasks, the entire train set is used to train, and the validation set is used for evaluation. To solve both these tasks, the network must learn to recognize important features of the image that can be reused via transfer learning and fine-tuning to the segmentation task, for which we simulated a few-shot scenario. We randomly selected 1, 5, 10, and 20 labeled seismic sections from the train set, and used only them for fine-tuning. Later on, testing into the entire test set of each dataset.
 
@@ -19,15 +20,9 @@ All used networks derive from the backbone of the ResNet-50 \cite{He2016}. For t
 ### Requires 
 - matplotlib
 - numpy
-
-scikit-image
-
-scikit-learn
-
-segyio
-
-torch
-
-torchinfo
-
-torchvision
+- scikit-image
+- scikit-learn
+- segyio
+- torch
+- torchinfo
+- torchvision
