@@ -2,7 +2,7 @@
 
 Codes of the paper "Self-Supervised Learning for Seismic Image Segmentation from Few-Labeled Samples", submitted to the special stream of IEEE Geoscience and Remote Sensing letters at Sibgrapi 2022.
 
-Demo link to Google Colab: https://colab.research.google.com/drive/1CS5itL_a_Ojwn0Pbuy_c4YDh9u20U57_?authuser=2
+Google Colab Demo can be found [[here]](https://colab.research.google.com/drive/1CS5itL_a_Ojwn0Pbuy_c4YDh9u20U57_?authuser=2).
 
 Authored by:
 * Bruno A. A. Monteiro - Department of Computer Science, UFMG, Belo Horizonte, Brazil
