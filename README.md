@@ -29,13 +29,20 @@ When training the model to solve the pretext tasks, the entire train set is used
 
 We randomly selected 1, 5, 10, and 20 labeled seismic sections from the train set, and used only them for fine-tuning. Later on, testing into the entire test set of each dataset.
 
-## Backbone
+## Network
 
 * ResNet-50 provided by PyTorch [[link]](https://pytorch.org/vision/0.8/_modules/torchvision/models/resnet.html).
 
-For the classification tasks, the output of the backbone is connected to an average pooling layer followed by the fully-connected classifier. For the segmentation task, we utilize a bilinear interpolation to retrieve the original input size, concatenating the first and the last activations. Then, two final convolutional layers are used to segment the dataset classes.  
+* For the classification tasks, the output of the backbone is connected to an average pooling layer followed by the fully-connected classifier
+* For the segmentation task, two final convolutional layers are used to segment the dataset classes
 
-Dropout was applied after each one of the four layer sets. All training images were augmented using random crop, half-chance horizontal flip, and Gaussian noise addition. We ran a grid search to find the optimal setups for both pretext tasks, varying the learning rates, the optimizers, and schedulers. The best models were then used for fine-tuning. In this stage, the employed grid search varies only the learning rates, using Adam optimizer and StepLR. The best setup was then selected for 5-fold cross-validation, being the initial learning rate of $1 \times 10^{-4}$ for the backbone and $1 \times 10^{-3}$ for the segmenter. For the baseline, the best setup was employing 10x bigger learning rates. At every stage, we use a weight decay of $1e^{-4}$. To validate our results, we calculated the confidence interval assuming a two-tailed paired t-student distribution.
+## Parameters 
+- Dropout was applied after each one of the four layer sets. 
+- All training images were augmented using random crop, half-chance horizontal flip, and Gaussian noise addition
+- Initial learning rate of $1 \times 10^{-4}$ for the backbone and $1 \times 10^{-3}$ for the segmenter
+- For the baseline, the best setup was employing 10x bigger learning rates
+- At every stage, we use a weight decay of $1e^{-4}$. 
+- Confidence interval calculated assuming a two-tailed paired t-student distribution.
 
 # Results
 
