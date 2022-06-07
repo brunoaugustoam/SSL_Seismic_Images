@@ -1,7 +1,7 @@
 
 # Demo of the segmentation of Seismic Images with Sel-Supervised Learning
 
-Link on Google Colab: https://colab.research.google.com/drive/1CS5itL_a_Ojwn0Pbuy_c4YDh9u20U57_?authuser=2
+Link on Google Colab: https://drive.google.com/file/d/1CS5itL_a_Ojwn0Pbuy_c4YDh9u20U57_/view?usp=sharing
 
 This is a demo of the experiments performed for the paper "Semantic Segmentation of Seismic Images Based on Self-Supervised Learning from Few-Labeled Samples", submitted to the special stream of IEEE Geoscience and Remote Sensing letters at Sibgrapi 2022.
 
