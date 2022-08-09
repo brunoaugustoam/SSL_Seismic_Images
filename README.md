@@ -1,6 +1,8 @@
-# SSL_Seismic_Images
+# Self-supervised Learning
 
-Codes of the paper "Self-Supervised Learning for Seismic Image Segmentation from Few-Labeled Samples", submitted to the special stream of IEEE Geoscience and Remote Sensing letters at Sibgrapi 2022.
+Codes of the paper "Self-Supervised Learning for Seismic Image Segmentation from Few-Labeled Samples" published by IEEE Geoscience and Remote Sensing Letters (Volume 19 - 2022).  
+
+Available at:  https://ieeexplore.ieee.org/document/9837909 
 
 Google Colab Demo can be found [[here]](https://drive.google.com/file/d/1CS5itL_a_Ojwn0Pbuy_c4YDh9u20U57_/view?usp=sharing).
 
@@ -10,9 +12,11 @@ Authored by:
 * Jefersson A. dos Santos - Department of Computer Science, UFMG, Belo Horizonte, Brazil
 
 # Method
+The key idea of the SSL pretext task consists of pretraining the backbone on the same data domain of the final task.
 
-<img src="https://github.com/brunoaugustoam/SSL_Seismic_Images/blob/main/imgs/method.png" width="400" height="400">
+We have designed and evaluated three pretext tasks based on classical image processing techniques to force the model to learn semantic features of seismic images without using manually labeled data. We then showed that the pre-trained extracted attributes were relevant for a further segmentation task.
 
+<img src="https://github.com/brunoaugustoam/SSL_Seismic_Images/blob/main/imgs/method_resume.png" width="400" height="400">
 
 
 ## Datasets
@@ -50,7 +54,7 @@ We randomly selected 1, 5, 10, and 20 labeled seismic sections from the train se
 <img src="https://github.com/brunoaugustoam/SSL_Seismic_Images/blob/main/imgs/predictions.png" width="400" height="600">
 
 ## Few-shot plot
-<img src="https://github.com/brunoaugustoam/SSL_Seismic_Images/blob/main/imgs/grafs.png" width="400" height="400">
+<img src="https://github.com/brunoaugustoam/SSL_Seismic_Images/blob/main/imgs/graf_results.png" width="400" height="400">
 
 # Requires 
 - matplotlib
