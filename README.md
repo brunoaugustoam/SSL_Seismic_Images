@@ -51,7 +51,7 @@ We randomly selected 1, 5, 10, and 20 labeled seismic sections from the train se
 # Results
 
 ## Predictions
-<img src="https://github.com/brunoaugustoam/SSL_Seismic_Images/blob/main/imgs/predictions.png" width="400" height="600">
+<img src="https://github.com/brunoaugustoam/SSL_Seismic_Images/blob/main/imgs/predictions.png" width="400" height="400">
 
 ## Few-shot plot
 <img src="https://github.com/brunoaugustoam/SSL_Seismic_Images/blob/main/imgs/graf_results.png" width="400" height="400">
