@@ -269,7 +269,7 @@ def test_segmentation(dataloader_test, model, criterion, device,num_classes, pri
       plot_segmentation_results(test_images,test_labels,y_hat,0,name,dataloader_test.dataset.dataset_name, save, path, name_model)
 
     print("")
-    print(f'test loss {np.mean(loss_per_epoch):.5f},  test mean iou general: {np.round(iou_mean,4)}')
+    print(f'test loss {np.mean(loss_per_epoch):.5f},  test mean iou general: {np.round(np.mean(iou_mean_per_epoch),4)}')
 
     return  np.array(mean_iou_classes_per_epoch), np.array(np.std(iou_classes_per_epoch)), np.array(np.mean(iou_mean_per_epoch)), np.mean(loss_per_epoch), np.std(loss_per_epoch),  np.array(test_pred_list), np.array(test_semantic_label_list)
 
@@ -347,7 +347,7 @@ def val_segmentation(dataloader_val, model, criterion, device,num_classes, print
       plot_segmentation_results(val_images,val_labels,y_hat,0,name,dataset=dataloader_val.dataset.dataset_name)
 
     print("")
-    print(f'val loss {np.mean(loss_per_epoch):.5f},  val mean iou general: {np.round(iou_mean,4)}')
+    print(f'val loss {np.mean(loss_per_epoch):.5f},  val mean iou general: {np.round(np.mean(iou_mean_per_epoch),4)}')
 
     return np.array(mean_iou_classes_per_epoch) ,  np.array(np.std(iou_classes_per_epoch)), np.array(np.mean(iou_mean_per_epoch)), np.mean(loss_per_epoch), np.std(loss_per_epoch),  np.array(val_pred_list), np.array(val_semantic_label_list)
 
