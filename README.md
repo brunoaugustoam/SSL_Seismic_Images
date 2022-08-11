@@ -26,6 +26,7 @@ We have designed and evaluated three pretext tasks based on classical image proc
 ## Pretext Tasks
  * Rotation: the original image is randomly rotated into one of the five possible angles (-8,-4, 0, 4, 8 degrees). Then it is cropped, so no empty values are given as input. The network must then identify which of the rotations was applied. 
  * Jigsaw: the original image is cropped into 9 regular-sized tiles with a small random gap between them. To avoid an overly complicated task, the possible permutations are limited to 1000, being 500 randomly selected, and for each of them, its pair with the biggest hamming distance is selected. The model is requested to determine the original position for each one of the permuted tiles. 
+ * Frame Order:  Six key positions are defined equally distributed within the dataset set to be used as pseudo-classes. Than each randomply picked section (crosslines on the F3 Dataset, Inline on the Parihaka), is passed through the CNN and the final layer classifier predicts the key that is closer to each section.
 
 When training the model to solve the pretext tasks, the entire train set is used to train, and the validation set is used for evaluation. 
 
