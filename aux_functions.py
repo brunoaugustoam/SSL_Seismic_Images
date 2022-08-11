@@ -258,6 +258,34 @@ def save_rotation_log_results(saving_logs_path,name_model,
     np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_loss'+'.txt'),    val_loss  )
     np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_loss_std'+'.txt'), val_loss_std)
 
+def save_jigsaw_log_results(saving_logs_path,name_model, 
+            train_acc_mean,train_acc_std,train_loss_mean,train_loss_std,
+            val_acc_mean,val_acc_std,val_loss_mean,val_loss_std ):
+
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_acc_mean'+'.txt'         )     , train_acc_mean    )
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_acc_std'+'.txt'         )     , train_acc_std    )
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_loss_mean'+'.txt'          )   , train_loss_mean       )
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_loss_std'+'.txt'     )  , train_loss_std  )
+
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_acc_mean'+'.txt'           ), val_acc_mean       )
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_acc_std'+'.txt'         )     , val_acc_std    )
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_loss_mean'+'.txt'            ),  val_loss_mean      )
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_loss_std'+'.txt'  ) ,  val_loss_std )
+
+def save_frame_log_results(saving_logs_path,name_model,
+                            train_acc,train_acc_std,train_loss, train_loss_std,
+                            val_acc, val_acc_std,val_loss, val_loss_std
+                        ):
+    
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_acc'+'.txt'),  train_acc  )
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_acc_std'+'.txt'),  train_acc_std  )
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_loss'+'.txt'), train_loss)
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_loss_std'+'.txt'), train_loss_std)
+
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_acc'+'.txt'),   val_acc  )
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_acc_std'+'.txt'),    val_acc_std  )
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_loss'+'.txt'),    val_loss  )
+    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_loss_std'+'.txt'), val_loss_std)
 
 def save_segmentation_log_results(saving_logs_path,name_model,
     train_iou_classes_all, train_iou_std_between_classes_all, train_iou_mean_all, train_loss_mean_all, train_loss_std_all, 
@@ -276,11 +304,6 @@ def save_segmentation_log_results(saving_logs_path,name_model,
     np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_loss_mean_all'+'.txt'  ) ,  val_loss_mean_all )
     np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_loss_std_all'+'.txt'            ),  val_loss_std_all      )
 
-    #np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'test_iou_classes_all'+'.txt'          ) ,  test_iou_classes_all       )
-    #np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'test_iou_std_between_classes_all'+'.txt'         )     , test_iou_std_between_classes_all    )
-    #np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'test_iou_mean_all'+'.txt'           ) ,  test_iou_mean_all       )
-    #np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'test_loss_mean_all'+'.txt' ) ,  test_loss_mean_all  )
-    #np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'test_loss_std_all'+'.txt'           ) ,  test_loss_std_all       )
 
 def save_segmentation_log_few_shot(saving_logs_path,name_model,
     train_iou_classes_all, train_iou_std_between_classes_all, train_iou_mean_all, train_loss_mean_all, train_loss_std_all, 
@@ -290,23 +313,6 @@ def save_segmentation_log_few_shot(saving_logs_path,name_model,
     np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_iou_mean_all'+'.txt'          )   , train_iou_mean_all       )
     np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_loss_mean_all'+'.txt'     )  , train_loss_mean_all  )
     np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_loss_std_all'+'.txt'          ) ,  train_loss_std_all      )
-
-
-
-
-def save_jigsaw_log_results(saving_logs_path,name_model, 
-            train_acc_mean,train_acc_std,train_loss_mean,train_loss_std,
-            val_acc_mean,val_acc_std,val_loss_mean,val_loss_std ):
-
-    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_acc_mean'+'.txt'         )     , train_acc_mean    )
-    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_acc_std'+'.txt'         )     , train_acc_std    )
-    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_loss_mean'+'.txt'          )   , train_loss_mean       )
-    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'train_loss_std'+'.txt'     )  , train_loss_std  )
-
-    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_acc_mean'+'.txt'           ), val_acc_mean       )
-    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_acc_std'+'.txt'         )     , val_acc_std    )
-    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_loss_mean'+'.txt'            ),  val_loss_mean      )
-    np.savetxt(os.path.join(saving_logs_path, name_model+'_'+'val_loss_std'+'.txt'  ) ,  val_loss_std )
 
 
 
