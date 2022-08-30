@@ -1,10 +1,8 @@
 # Self-supervised Learning
 
-Codes of the paper "Self-Supervised Learning for Seismic Image Segmentation from Few-Labeled Samples" published by IEEE Geoscience and Remote Sensing Letters (Volume 19 - 2022).  
+Codes of the [[paper]](https://ieeexplore.ieee.org/document/9837909): "Self-Supervised Learning for Seismic Image Segmentation from Few-Labeled Samples" published by IEEE Geoscience and Remote Sensing Letters (Volume 19 - 2022). 
 
-Available at:  https://ieeexplore.ieee.org/document/9837909 
-
-Google Colab Demo can be found [[here]](https://drive.google.com/file/d/1CS5itL_a_Ojwn0Pbuy_c4YDh9u20U57_/view?usp=sharing).
+[[Google Colab Demo available]](https://drive.google.com/file/d/1CS5itL_a_Ojwn0Pbuy_c4YDh9u20U57_/view?usp=sharing).
 
 Authored by:
 * Bruno A. A. Monteiro - Department of Computer Science, UFMG, Belo Horizonte, Brazil
