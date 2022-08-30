@@ -18,8 +18,8 @@ We have designed and evaluated three pretext tasks based on classical image proc
 
 
 ## Datasets
- * Netherlands F3 Interpretation Dataset [link](https://zenodo.org/record/1471548\#.Yf0Y3-rMKrx). 
- * Parihaka Seismic Data [link](https://public.3.basecamp.com/p/JyT276MM7krjYrMoLqLQ6xST). 
+ * [Netherlands F3 Interpretation Dataset](https://zenodo.org/record/1471548\#.Yf0Y3-rMKrx). 
+ * [Parihaka Seismic Data](https://public.3.basecamp.com/p/JyT276MM7krjYrMoLqLQ6xST). 
 
 ## Pretext Tasks
  * Rotation: the original image is randomly rotated into one of the five possible angles (-8,-4, 0, 4, 8 degrees). Then it is cropped, so no empty values are given as input. The network must then identify which of the rotations was applied. 
@@ -34,7 +34,7 @@ We randomly selected 1, 5, 10, and 20 labeled seismic sections from the train se
 
 ## Network
 
-* ResNet-50 provided by PyTorch [link](https://pytorch.org/vision/0.8/_modules/torchvision/models/resnet.html).
+* ResNet-50 provided by [PyTorch](https://pytorch.org/vision/0.8/_modules/torchvision/models/resnet.html).
 
 * For the classification tasks, the output of the backbone is connected to an average pooling layer followed by the fully-connected classifier
 * For the segmentation task, two final convolutional layers are used to segment the dataset classes
